@@ -23,19 +23,20 @@ const Drum = () => {
           </label>
         </div>
         <div className="display">Display</div>
-        <div className="volumeDiv">
+        {/* <div className="volumeDiv"> */}
+
+        <div className="slidecontainer">
           <p className="control__label">Slider</p>
-          <div className="slidecontainer">
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              class="sliderVol"
-              id="myRange"
-            />
-          </div>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="sliderVol"
+            id="myRange"
+          />
         </div>
+        {/* </div> */}
         <div>
           <p className="control__label">Bank</p>
           <label className="switch">

@@ -5,7 +5,7 @@
 
   color: rgba(255, 255, 255, 0.87);
   background-color: #300057e5;
-  /* background-image: url("./assets/drumbg.jpg"); */
+  background-image: url("./assets/drumbg.jpg");
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -52,7 +52,7 @@ h1 {
   width: 20em;
   padding: 1em;
   border-radius: 5px;
-  margin-bottom: 0.5em;
+  /* margin-bottom: 0.5em; */
 }
 
 .beat {
@@ -76,7 +76,7 @@ h1 {
   padding: 1em;
   background-color: beige;
   border-radius: 5px;
-  max-width: 20em;
+  max-width: 100%;
 }
 
 .control__label {
@@ -161,7 +161,7 @@ input:checked + .slider:before {
 }
 
 .slidecontainer {
-  max-width: 50em; /* Width of the outside container */
+  max-width: 100%; /* Width of the outside container */
 }
 
 /* The slider itself */
@@ -197,4 +197,14 @@ input:checked + .slider:before {
   height: 25px; /* Slider handle height */
   background: rgb(25, 25, 117); /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+@media only screen and (max-width: 600px) {
+  .main__card {
+    grid-template-columns: 1fr;
+  }
+  .beatcard {
+    margin-bottom: 0.5em;
+    margin-right: 0em;
+  }
 }
