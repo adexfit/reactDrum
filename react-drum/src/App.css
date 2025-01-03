@@ -4,7 +4,8 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #300057;
+  background-color: #300057e5;
+  /* background-image: url("./assets/drumbg.jpg"); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,6 +37,8 @@ h1 {
 .main__card {
   background-color: #b5bdce;
   padding: 0.6em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .beatcard {
@@ -44,6 +47,7 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 0.5em;
   column-gap: 0.5em;
+  margin-right: 0.5em;
 
   width: 20em;
   padding: 1em;
@@ -52,35 +56,47 @@ h1 {
 }
 
 .beat {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
   border: 1px solid rgb(240, 229, 229);
   background-color: rgb(25, 25, 117);
   color: #ffffff;
   font-weight: 600;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .control__panel {
   display: grid;
-  row-gap: 0.6em;
+  row-gap: 0.3em;
   justify-content: center;
   color: #3c2b5c;
   padding: 1em;
   background-color: beige;
-  display: grid;
   border-radius: 5px;
+  max-width: 20em;
+}
+
+.control__label {
+  margin-bottom: -0.2em;
 }
 
 .display {
-  background-color: #cccccc;
+  background-color: rgb(25, 25, 117);
   padding: 0.8em;
-  color: #300057;
+  color: #eedaff;
   width: 15em;
   border-radius: 5px;
   font-weight: 600;
 }
 
-/*  css for toggle switch   */
+.power {
+  margin-bottom: 15px;
+}
+
+/*  ------------ css for toggle switch -------------  */
 .switch {
   position: relative;
   display: inline-block;
@@ -95,7 +111,7 @@ h1 {
   height: 0;
 }
 
-/* The slider */
+/* ---------- The toggle slider --------------- */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -121,15 +137,64 @@ h1 {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: rgb(25, 25, 117);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px rgb(25, 25, 117);
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+/* END  ------------ css for toggle switch -------------  */
+
+/* ---------- CSS for volume slider --------------------- */
+.volumeDiv {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidecontainer {
+  max-width: 50em; /* Width of the outside container */
+}
+
+/* The slider itself */
+.sliderVol {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.sliderVol:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.sliderVol::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(25, 25, 117); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderVol::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(25, 25, 117); /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
