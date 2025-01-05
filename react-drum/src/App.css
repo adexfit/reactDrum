@@ -68,6 +68,11 @@ h1 {
   cursor: pointer;
 }
 
+.drum-pad:active {
+  transform: translateY(4px);
+  background-color: rgb(201, 197, 0);
+}
+
 .control__panel {
   display: grid;
   row-gap: 0.3em;
