@@ -211,5 +211,6 @@ input:checked + .slider:before {
   .beatcard {
     margin-bottom: 0.5em;
     margin-right: 0em;
+    width: 90%;
   }
 }
